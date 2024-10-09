@@ -49,6 +49,17 @@ Basically we are trying to represent these formulas from the article:
 
 `python3 main.py --amp_draw 25 --desired_runtime 15 --battery_weight 1350 --battery_capacity_wh 274 --weight_without_battery 0 --num_propellers 4`
 
+Yields:
+
+```
+Estimated battery capacity for 15.0-minute runtime: 6250.00 mAh
+Total Weight: 1350.00 g
+Thrust/Prop @ Hover: 337.50 g
+Estimated Flight Time: 27.57 minutes
+```
+
+With two of these battery the Matrice 300 RTK can fly 55 minutes with no payload, so this appears approximately correct.
+
 ### Command to test high-speed racing battery
 - Capacity: 1300 mAh
 - Voltage: 22.v
@@ -56,3 +67,12 @@ Basically we are trying to represent these formulas from the article:
 - Weight: 200g
 
 `python3 main.py --amp_draw 25 --desired_runtime 15 --battery_weight 200 --battery_capacity_wh 28.86 --weight_without_battery 0 --num_propellers 4`
+
+```
+Estimated battery capacity for 15.0-minute runtime: 6250.00 mAh
+Total Weight: 200.00 g
+Thrust/Prop @ Hover: 50.00 g
+Estimated Flight Time: 2.90 minutes
+```
+
+Online reviews report 4-5 minutes of flight time with this battery (Tattu), so this appears to underestimate a bit.
