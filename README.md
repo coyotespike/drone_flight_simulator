@@ -39,3 +39,20 @@ Basically we are trying to represent these formulas from the article:
 - This is kind of an unanswerable question, because as the battery gets heavier, we need larger/slower/more efficient propellers to carry it. We really can't isolate the batteries purely.
 - Still, I would like to come up with an answer like so: two AA batteries could fly for xx, medium drone battery for xx.
 - As batteries improve, so will drones. Drones benefit from better batteries and better AI - neither field shows signs of slowing down so drones are just a beautiful area to build in.
+
+### Command to test DJI's Matrice 300 battery, the TB60
+- Capacity: 5935 mAh (5.935 Ah)
+- Voltage: 52.8V (12S configuration)
+- Energy: 274 Wh
+- Battery Type: LiPo 12S
+- Weight: 1350g (1.35 kg)
+
+`python3 main.py --amp_draw 25 --desired_runtime 15 --battery_weight 1350 --battery_capacity_wh 274 --weight_without_battery 0 --num_propellers 4`
+
+### Command to test high-speed racing battery
+- Capacity: 1300 mAh
+- Voltage: 22.v
+- Energy: 28.86 Wh
+- Weight: 200g
+
+`python3 main.py --amp_draw 25 --desired_runtime 15 --battery_weight 200 --battery_capacity_wh 28.86 --weight_without_battery 0 --num_propellers 4`
